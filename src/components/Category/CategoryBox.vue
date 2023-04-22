@@ -67,4 +67,10 @@ a {
 #edit-category {
   float: right;
 }
+
+/* .card-container {
+  height: 400px;
+  width: 400px;
+  margin: 0px;
+} */
 </style>

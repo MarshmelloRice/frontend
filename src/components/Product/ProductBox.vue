@@ -67,4 +67,5 @@ a {
 #edit-product {
   float: right;
 }
+
 </style>

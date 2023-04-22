@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <!--    Logo-->
     <router-link class="navbar-brand" :to="{ name: 'Home' }">
       <img id="logo" src="../assets/icon.png" />
@@ -20,10 +20,10 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!--      Search Bar-->
-      <form class="form-inline ml-auto mr-auto">
+      <form class="form-inline mx-auto">
         <div class="input-group">
           <input
-            size="100"
+            size="50"
             type="text"
             class="form-control"
             placeholder="Search Items"
@@ -53,7 +53,7 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a
-            class="nav-link text-light dropdown-toggle"
+            class="nav-link text-dark dropdown-toggle"
             href="#"
             id="navbarDropdown"
             role="button"
@@ -78,7 +78,7 @@
 
         <li class="nav-item dropdown">
           <a
-            class="nav-link text-light dropdown-toggle"
+            class="nav-link text-dark dropdown-toggle"
             href="#"
             id="navbarDropdown"
             role="button"
@@ -120,7 +120,7 @@
         </li>
 
         <li class="nav-item">
-          <router-link class="nav-link text-light" :to="{ name: 'Order' }"
+          <router-link class="nav-link text-dark" :to="{ name: 'Order' }"
             >Orders</router-link
           >
         </li>
@@ -197,5 +197,11 @@ export default {
 }
 #cart {
   position: relative;
+}
+.cart-icon {
+  color: rgb(0, 0, 0);
+}
+#logo {
+  width: 100px;
 }
 </style>

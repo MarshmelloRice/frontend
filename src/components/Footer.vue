@@ -1,54 +1,39 @@
 <template>
-  <footer>
-    <div class="container pt-5">
+<footer class="bg-light text-center text-lg-start">
+  <div class="container p-4 pb-0">
+    <form action="">
       <div class="row">
-        <div class="col-md-3 col-6">
-          <ul style="list-style-type: none">
-            <li class="text-light font-weight-bold pb-2">Get to Know Us</li>
-            <li><a class="footer-link font-weight-light" href="#">About Us</a></li>
-            <li><a class="footer-link font-weight-light" href="#">Android App</a><br></li>
-            <li><a class="footer-link font-weight-light" href="#">iOS App</a><br></li>
-          </ul>
+        <div class="col-auto mb-4 mb-md-0">
+          <p class="pt-2">
+            <strong>Sign up for our newsletter</strong>
+          </p>
         </div>
 
-        <div class="col-md-3 col-6">
-          <ul style="list-style-type: none">
-            <li class="text-light font-weight-bold">Connect With Us</li>
-            <li><a class="footer-link font-weight-light" href="#">Facebook</a></li>
-            <li><a class="footer-link font-weight-light" href="#">Twitter</a><br></li>
-            <li><a class="footer-link font-weight-light" href="#">Instagram</a><br></li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <ul style="list-style-type: none">
-            <li class="text-light font-weight-bold">Make Money With Us</li>
-            <li><a class="footer-link font-weight-light" href="#">Sell with Us</a></li>
-            <li><a class="footer-link font-weight-light" href="#">Become an Affiliate</a><br></li>
-            <li><a class="footer-link font-weight-light" href="#">Advertise Your Products</a><br></li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <ul style="list-style-type: none">
-            <li class="text-light font-weight-bold">Let Us Help You</li>
-            <li><a class="footer-link font-weight-light" href="#">Return Centre</a></li>
-            <li><a class="footer-link font-weight-light" href="#">100% Purchase Protection</a><br></li>
-            <li><a class="footer-link font-weight-light" href="#">Help</a><br></li>
-            <li><a class="footer-link font-weight-light" href="#">App Download</a><br></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <div class="text-center py-5">
-            <img id="logo" src="../assets/icon.png" />
+        <div class="col-md-5 col-12 mb-4 mb-md-0">
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="email_id" class="form-control" aria-placeholder="Enter email"/>
+            <label class="form-label" for="form5Example25"></label>
           </div>
         </div>
+
+        <div class="col-auto mb-4 mb-md-0">
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary mb-4">
+            Subscribe
+          </button>
+        </div>
       </div>
-    </div>
-  </footer>
+    </form>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-dark" href="http://localhost:8080/">Group 6</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 </template>
 
 <script>
@@ -77,13 +62,30 @@ a {
   color: #DDD;
 }
 
-#logo {
-  width: 150px;
-}
-
 footer {
   font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 35px 0;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px;
+}
 
+form {
+  width: 100%;
+}
+
+.row {
+  justify-content: center;
+}
+
+.text-center {
+  margin-top: 20px;
+  padding: 10px 0;
+}
 </style>

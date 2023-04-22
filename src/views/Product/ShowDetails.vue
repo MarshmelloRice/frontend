@@ -1,73 +1,62 @@
 <template>
-  <div class="container">
-    <div class="row pt-5">
-      <div class="col-md-1"></div>
-      <div class="col-md-4 col-12">
-        <img :src="product.imageURL" :alt="product.name" class="img-fluid" />
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img :src="product.imageURL" :alt="product.name" class="card-img" />
       </div>
-      <div class="col-md-6 col-12 pt-3 pt-md-0">
-        <h4>{{ product.name }}</h4>
-        <h6 class="category font-italic">{{ category.categoryName }}</h6>
-        <h6 class="font-weight-bold">$ {{ product.price }}</h6>
-        <p>
-          {{ product.description }}
-        </p>
-
-        <div class="d-flex flex-row justify-content-between">
-          <div class="input-group col-md-3 col-4 p-0">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Quantity</span>
-            </div>
-            <input class="form-control" type="number" v-bind:value="quantity" />
-          </div>
-
-          <div class="input-group col-md-3 col-4 p-0">
-            <button
-              type="button"
-              id="add-to-cart-button"
-              class="btn"
-              @click="addToCart(this.id)"
-            >
-              Add to Cart
-              <ion-icon name="cart-outline" v-pre></ion-icon>
-            </button>
-          </div>
-        </div>
-
-        <div class="features pt-3">
-          <h5><strong>Features</strong></h5>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Officia quas, officiis eius magni error magnam voluptatem</li>
-            <li>nesciunt quod! Earum voluptatibus quaerat dolorem doloribus</li>
-            <li>molestias ipsum ab, ipsa consectetur laboriosam soluta et</li>
-            <li>ut doloremque dolore corrupti, architecto iusto beatae.</li>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h4 class="card-title">{{ product.name }}</h4>
+          <h6 class="category font-italic">{{ category.categoryName }}</h6>
+          <p class="card-text">{{ product.description }}</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Price:</strong> ${{ product.price }}
+            </li>
+            <li class="list-group-item">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Quantity:</span>
+                </div>
+                <input class="form-control" type="number" v-bind:value="quantity" />
+              </div>
+            </li>
+            <li class="list-group-item">
+              <button
+                type="button"
+                id="add-to-cart-button"
+                class="btn btn-primary"
+                @click="addToCart(this.id)"
+              >
+                Add to Cart
+                <ion-icon name="cart-outline" v-pre></ion-icon>
+              </button>
+              <button
+                id="wishlist-button"
+                class="btn btn-light ml-2"
+                :class="{ product_added_wishlist: isAddedToWishlist }"
+                @click="addToWishList(this.id)"
+              >
+                {{ wishlistString }}
+              </button>
+              <button
+                id="show-cart-button"
+                type="button"
+                class="btn btn-light ml-2"
+                @click="listCartItems()"
+              >
+                Show Cart
+                <ion-icon name="cart-outline" v-pre></ion-icon>
+              </button>
+            </li>
           </ul>
         </div>
-
-        <button
-          id="wishlist-button"
-          class="btn mr-3 p-1 py-0"
-          :class="{ product_added_wishlist: isAddedToWishlist }"
-          @click="addToWishList(this.id)"
-        >
-          {{ wishlistString }}
-        </button>
-        <button
-          id="show-cart-button"
-          type="button"
-          class="btn mr-3 p-1 py-0"
-          @click="listCartItems()"
-        >
-          Show Cart
-
-          <ion-icon name="cart-outline" v-pre></ion-icon>
-        </button>
       </div>
-      <div class="col-md-1"></div>
     </div>
   </div>
 </template>
+
+
 
 <script>
 export default {

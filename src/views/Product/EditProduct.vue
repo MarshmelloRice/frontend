@@ -82,4 +82,8 @@ h4 {
   font-weight: 700;
 }
 
+.row {
+  width: 100%;
+}
+
 </style>

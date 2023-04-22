@@ -5,9 +5,7 @@
 
       <div class="container py-5">
         <header class="text-left text-white py-5">
-          <h3 class="mb-4 rounded"><a href="#start-shopping" class="bg-white px-2 py-2 rounded" id="heading">Start Shopping</a></h3>
-          <p id="content" class="lead mb-0 bg-dark p-1 rounded">Simple Coding Market is for educational purposes only.
-            It can be used by developers to learn about developing an ecommerce application complete with backend and frontend for Web and Android</p>
+          <h1 class="mb-4 rounded"><a href="#start-shopping" class="bg-white px-2 py-2 rounded" id="heading">Start Shopping</a></h1>
         </header>
       </div>
     </div>
@@ -15,7 +13,7 @@
     <div id="start-shopping" class="container">
       <div class="row">
         <div class="col-12 text-left">
-          <h2 class="pt-3">Top Categories</h2>
+          <h3 class="pt-3">Top Categories</h3>
         </div>
       </div>
       <div class="row">
@@ -30,7 +28,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-left">
-          <h2 class="pt-3">Top Products</h2>
+          <h3 class="pt-3">Top Products</h3>
         </div>
       </div>
       <div class="row">
@@ -88,10 +86,11 @@
   }
 
   #content {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
-  h2 {
-    font-family: 'Josefin Sans', sans-serif;
+  h3 {
+    font-family: 'Roboto', sans-serif;
   }
+
 </style>
